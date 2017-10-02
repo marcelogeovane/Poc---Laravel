@@ -11,14 +11,18 @@
 
     <title>Freelancer - Start Bootstrap Theme</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Core CSS -->
+<link href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}"
+rel="stylesheet">
 
-    <!-- Theme CSS -->
-    <link href="css/freelancer.css" rel="stylesheet">
+<!-- Theme CSS -->
+<link href="{{ asset('assets/css/freelancer.css') }}"
+rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!-- Custom Fonts -->
+<link href="{{ asset('assets/plugins/font-awesome/css/font-awesome.min.css') }}"
+rel="stylesheet"
+type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
@@ -56,15 +60,33 @@
         background: RGB(160, 82, 45) ; 
 
     }
+
+    
     hr .star-light:after{
         background: RGB(245, 245, 245) ;
         color:#FFF;
     }
 
-  .navbar-custom .navbar-nav li a:hover{
-    color: RGB(160, 82, 45);
-}
+    .navbar-custom .navbar-nav li a {
+        color: RGB(160, 82, 45);
+    }
 
+	.navbar-custom .navbar-nav li a:hover{
+		color: RGB(160, 82, 45);
+	}
+
+	.navbar-custom .navbar-nav li.active a {
+	  color: white;
+	  background: RGB(205, 133, 63);
+	}
+
+	.navbar-custom .navbar-nav li.active a,
+	.navbar-custom .navbar-nav li.active a:active,
+	.navbar-custom .navbar-nav li.active a:focus,
+	.navbar-custom .navbar-nav li.active a:hover{
+		color:RGB(205, 133, 63);
+		background: white;
+	}
 hr.star-light:after{
     background-color:RGB(245, 245, 245);
     color:#000;
@@ -117,6 +139,61 @@ border-color:RGB(140, 85, 45);
 		font-size:20px;
 	}
 
+    .btn-success {
+    color: #fff;
+    background-color: RGB(160, 82, 45);
+    border-color: RGB(160, 82, 45);
+    font-weight: 700;
+}
+
+.btn-primary{
+	background-color: RGB(205, 133, 63);
+	color: #fff;
+	border-color: RGB(205, 133, 63);
+	 font-size: 1.0em;
+}
+
+.btn-primary.active,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.open .dropdown-toggle.btn-primary{
+color:#fff;
+background-color:RGB(140, 85, 45);
+border-color:RGB(140, 85, 45);
+}
+.btn-success.active,
+.btn-success:active,
+.btn-success:focus,
+.btn-success:hover,
+.open .dropdown-toggle.btn-success{
+    color:#fff;
+    background-color:RGB(140, 85, 45);
+    border-color:RGB(140, 85, 45);}
+
+	body{
+		font-size:20px;
+	}
+
+    btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+  color:RGB(160, 82, 45);
+background-color: RGB(205, 133, 63);
+border-color: RGB(205, 133, 63);
+}
+
+    #map {
+        height: 400px;
+        width: 100%;
+       }
+
     </style>
 
 </head>
@@ -126,36 +203,70 @@ border-color:RGB(140, 85, 45);
 
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="#page-top">PTFMG</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#predios">Prédios</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">Sobre</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Comentários</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="{{url('/')}}">PTFMG</a>
         </div>
-        <!-- /.container-fluid -->
-    </nav>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li class="page-scroll active">
+                    <div class="btn-group">
+                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            Prédios
+                        </button>
+                        <ul class="dropdown-menu">
+                        <li class="active">
+                                <a href="{{url('/estacao')}}">Antiga Estação Ferroviária</a>
+                            </li>
+                            <li class="active">
+                                <a href="{{url('/matadouro')}}">Antigo Matadouro da Alvorada</a>
+                            </li>
+                            <li class="active">
+                                <a href="{{url('/engenheiro')}}">Casa do Engenheiros</a>
+                            </li>
+                            <li class="active">
+                                <a href="{{url('/vicentinos')}}">Casarão dos Vicentinos</a>
+                            </li>
+                            <li class="active">
+                                <a href="{{url('/antoniovieira')}}">Edifício Antônio Vieira</a>
+                            </li>
+                            <li class="active">
+                                <a href="{{url('/emart')}}">EMART</a>
+                            </li>
+                            <li class="active">
+                                <a href="{{url('/rodarte')}}">Escola Estadual Joaquim Rodarte</a>
+                            </li>
+                            <li class="active">
+                                <a href="{{url('/matriz')}}">Matriz São Vicente Férrer</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="page-scroll">
+                    <button  class="btn btn-primary">
+                    <a href="#history">História</a>
+                        </button>
+                </li>
+                <li class="page-scroll">
+                    <button  class="btn btn-primary"><a href="#contact">
+                            Comentários
+                            </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
 
     <!-- Header -->
     <header>
@@ -165,7 +276,7 @@ border-color:RGB(140, 85, 45);
                     <div class="intro-text">
                         <h3 class="name">Antigo Matadouro</h3>
                         <hr class="star-light">
-                        <img class="img-responsive" src="img/predios/matadouro.png" alt="">
+                        <img class="img-responsive" src="assets/img/predios/matadouro.png" alt="">
                     </div>
                 </div>
             </div>
@@ -180,28 +291,32 @@ border-color:RGB(140, 85, 45);
                     <h2>Dados</h2>
                     <hr class="star-primary">
                 </div>
-            </div>
-            <div class="row">
-           <table class="table hidden"> 
-           		<td>
-           			<tr>Nome: </tr>
-           			<tr>Antigo Matadouro</tr>
-           		</td>
-           		<br>
-           		<td>
-           			<tr>Endereço: </tr>
-           			<tr>R. 1º de Maio,s/nº - Alvorada, Formiga - MG, 35570-000
-           				<br>
-						Latitude: 20°28’3’’S
-						<br>
-						Longitude: 45°25’35’’W    
-					</tr>
-           		</td>
-           </table>
+                <div class="col-lg-8 text-left">
+                        <table class="table hidden"> 
+                            <td>
+                                <tr>Nome: </tr>
+                                <tr>Antigo Matadouro</tr>
+                            </td>
+                            <br>
+                            <td>
+                                <tr>Endereço: </tr>
+                                    <tr>R. 1º de Maio,s/nº - Alvorada, Formiga - MG, 35570-000
+                                        <br>
+                                        Latitude: -20.4729402
+                                        <br>
+                                        Longitude: -45.4292153   
+                                     </tr>
+                            </td>
+                        </table>
             	
-            </div>
-
-            
+                </div>
+                
+                
+                <div class="col-lg-4"  >
+                    <div id="map"></div>
+                </div>
+           
+           </div>
         </div>
     </section>
 
@@ -216,10 +331,10 @@ border-color:RGB(140, 85, 45);
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <p> Foi construído a partir de 1915 na administração do prefeito Cel. José Gonçalves
-D’Amarante e foi inaugurado no ano de 1919 no governo do Dr. Newton Ferreira Pires.
-O prédio foi restaurado em 2004 e destinado a abrigar o Centro Municipal de
-Convivência dos Idosos.</p>
+                                            <p> Foi construído a partir de 1915 na administração do prefeito Cel. José Gonçalves
+                        D’Amarante e foi inaugurado no ano de 1919 no governo do Dr. Newton Ferreira Pires.
+                        O prédio foi restaurado em 2004 e destinado a abrigar o Centro Municipal de
+                        Convivência dos Idosos.</p>
                 </div>
             </div>
         </div>
@@ -235,22 +350,22 @@ Convivência dos Idosos.</p>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>A Antiga Casa do Engenheiro da Rede Ferroviária localiza-se nas proximidades do
-Prédio da Antiga Estação Ferroviária. O imóvel está localizado na Rua Governador
-Valadares, via pavimentada, na região central de Formiga. Possui boa infra-estrutura,
-rede de água e esgoto, passeios e boa iluminação pública. A edificação está inserida
-numa área que compreende o complexo ferroviário, pátio de manobras, incluindo linhas
-férreas, vagão de passageiros, estação rádio telegráfica e a antiga estação ferroviária,
-hoje Museu Francisco Nhonhô Fonseca.</p>
+                                                <p>A Antiga Casa do Engenheiro da Rede Ferroviária localiza-se nas proximidades do
+                            Prédio da Antiga Estação Ferroviária. O imóvel está localizado na Rua Governador
+                            Valadares, via pavimentada, na região central de Formiga. Possui boa infra-estrutura,
+                            rede de água e esgoto, passeios e boa iluminação pública. A edificação está inserida
+                            numa área que compreende o complexo ferroviário, pátio de manobras, incluindo linhas
+                            férreas, vagão de passageiros, estação rádio telegráfica e a antiga estação ferroviária,
+                            hoje Museu Francisco Nhonhô Fonseca.</p>
                 </div>
-                <div class="col-lg-4">
-                <p>Este complexo está adjacente a uma grande
-área verde localizada na encosta do ‘’Morro do Cristo’’. Nas limitações urbanas desta
-área, compreendem as edificações vizinhas da Rua Governador Valadares, que são,
-predominantemente, térreas. Contudo, mais adiante, novas construções de prédios de
-vários pavimentos, como se verificam em algumas partes do centro do município,
-denunciam a tendência de adensamento nesta região.</p>
-               </div>
+                    <div class="col-lg-4">
+                                            <p>Este complexo está adjacente a uma grande
+                            área verde localizada na encosta do ‘’Morro do Cristo’’. Nas limitações urbanas desta
+                            área, compreendem as edificações vizinhas da Rua Governador Valadares, que são,
+                            predominantemente, térreas. Contudo, mais adiante, novas construções de prédios de
+                            vários pavimentos, como se verificam em algumas partes do centro do município,
+                            denunciam a tendência de adensamento nesta região.</p>
+                    </div>
             </div>
         </div>
     </section>
@@ -330,22 +445,66 @@ denunciam a tendência de adensamento nesta região.</p>
 
     
 
+<!-- jQuery -->
+<script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
 
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<!-- Contact Form JavaScript -->
+<script src="{{ asset('assets/js/jqBootstrapValidation.js') }}"></script>
+<script src="{{ asset('assets/js/contact_me.js') }}"></script>
 
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+<!-- Theme JavaScript -->
+<script src="{{ asset('assets/js/freelancer.min.js') }}"></script>
 
-    <!-- Theme JavaScript -->
-    <script src="../js/freelancer.min.js"></script>
+
+<script>
+       function initMap() {
+        
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 10,
+                  center: {lat: -20.4643069, lng: -45.4263189}
+                });
+        
+                // Create an array of alphabetical characters used to label the markers.
+                var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        
+                // Add some markers to the map.
+                // Note: The code uses the JavaScript Array.prototype.map() method to
+                // create an array of markers based on a given "locations" array.
+                // The map() method here has nothing to do with the Google Maps API.
+                var markers = locations.map(function(location, i) {
+                  return new google.maps.Marker({
+                    position: location,
+                    label: labels[i % labels.length]
+                  });
+                });
+        
+                // Add a marker clusterer to manage the markers.
+                var markerCluster = new MarkerClusterer(map, markers,
+                    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+              }
+              var locations = [
+                {lat: -20.4729402, lng: -45.4292153},
+                {lat: -20.460393,  lng: -45.431176},
+                {lat: -20.4641161, lng: -45.4266165},
+                {lat: -20.4643069, lng: -45.4263189},
+                {lat: -20.461882, lng: -45.431169},
+                {lat: -20.460673, lng: -45.432049},
+                {lat: -20.461844, lng: -45.425339},
+                {lat: -20.467250, lng: -45.427260}
+              ]
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC-zlbgsbJtjrbMKAS-IywFE0WikfWPY0&callback=initMap">
+    </script>
+
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
 
 </body>
 

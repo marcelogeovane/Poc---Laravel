@@ -140,15 +140,15 @@ border-color:RGB(140, 85, 45);
 	}
 
     .btn-success {
-    color: white;
+    color: #fff;
     background-color: RGB(160, 82, 45);
     border-color: RGB(160, 82, 45);
     font-weight: 700;
 }
 
 .btn-primary{
-	color: white;
-    background-color: RGB(205, 133, 63);
+	background-color: RGB(205, 133, 63);
+	color: #fff;
 	border-color: RGB(205, 133, 63);
 	 font-size: 1.0em;
 }
@@ -158,7 +158,7 @@ border-color:RGB(140, 85, 45);
 .btn-primary:focus,
 .btn-primary:hover,
 .open .dropdown-toggle.btn-primary{
-color:white;
+color:#fff;
 background-color:RGB(140, 85, 45);
 border-color:RGB(140, 85, 45);
 }
@@ -175,7 +175,7 @@ border-color:RGB(140, 85, 45);
 		font-size:20px;
 	}
 
-.btn-primary:active:hover,
+    btn-primary:active:hover,
 .btn-primary.active:hover,
 .open > .dropdown-toggle.btn-primary:hover,
 .btn-primary:active:focus,
@@ -184,7 +184,7 @@ border-color:RGB(140, 85, 45);
 .btn-primary:active.focus,
 .btn-primary.active.focus,
 .open > .dropdown-toggle.btn-primary.focus {
-color:RGB(160, 82, 45);
+  color:RGB(160, 82, 45);
 background-color: RGB(205, 133, 63);
 border-color: RGB(205, 133, 63);
 }
@@ -267,7 +267,6 @@ border-color: RGB(205, 133, 63);
     </div>
     <!-- /.container-fluid -->
 </nav>
-
     <!-- Header -->
     <header>
         <div class="container" id="maincontent" tabindex="-1">
@@ -275,9 +274,9 @@ border-color: RGB(205, 133, 63);
                 <div class="col-lg-12">
                     
                     <div class="intro-text">
-                        <h3 class="name">Edificío Antônio Vieira</h3>
+                        <h3 class="name">Matriz São Vicente Férrer</h3>
                         <hr class="star-light">
-                        <img class="img-responsive" src="assets/img/predios/antoniovieira.png" alt="">
+                        <img class="img-responsive" src="assets/img/matriz.png" alt="">
                     </div>
                 </div>
             </div>
@@ -298,16 +297,16 @@ border-color: RGB(205, 133, 63);
            <table class="table hidden"> 
            		<td>
            			<tr>Nome: </tr>
-           			<tr>Edificío Antônio Vieira</tr>
+           			<tr>Matriz São Vicente Férrer</tr>
            		</td>
            		<br>
            		<td>
            			<tr>Endereço: </tr>
-           			<tr>R. Dr. Teixeira Soares,264 - Centro, Formiga - MG, 35570-000
+           			<tr>Praça São Vicente Ferrer - Centro, Formiga - MG, 35570-000
            				<br>
-						Latitude:-20.4618958
+						Latitude:-20.4643069
 						<br>
-						Longitude: -45.4258842
+						Longitude: -45.4263189
 					</tr>
            		</td>
            </table>
@@ -333,14 +332,11 @@ border-color: RGB(205, 133, 63);
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <p>O Edifício Antônio Vieira era inicialmente um internato masculino. Logo após se tornou um
-colégio misto (para homens e mulheres). Até então, o prédio contava com um enorme
-terreno onde tinham quadras esportivas,campo de futebol e dormitórios. Por volta da
-década de 80 o edifício foi vendido para um grupo de empresários que derrubaram a parte
-dos fundos do colégio, onde hoje se encontra um condomínio residencial. O prefeito da
-época Eduardo Brás Neto Almeida desapropriou o prédio dos empresários pois é um
-monumento que faz parte da história de Formiga. Mais posteriormente foi iniciado o
-processo de tombamento do prédio.</p>
+                    <p>Sua construção teve início em 1749, nesse período era a primeira capela de Formiga. Em
+                    1765, a primeira fase de sua construção foi finalizada, mas em 1873 ela sofreu uma
+                    ampliação, construindo o altar-mor onde está a imagem de São Vicente Férrer. É
+                    importante ressaltar que ela foi construída no período de transição entre o Barroco e o
+                    Rococó, por isso possui traços destes dois estilos de construção.</p>
                 </div>
             </div>
         </div>
@@ -356,16 +352,15 @@ processo de tombamento do prédio.</p>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>A frente do edifício é composta por um jardim com árvores e arbustos, atravessando a rua
-tem a Santa Casa de Caridade de Formiga, na parte de trás e ao lado do edifício,onde
-também era parte do colégio, atualmente há no local um condomínio. Próximo ao edifício há
-o Medcenter, outros edifícios, e alguns estabelecimentos comerciais.</p>
+                    <p>Antigamente só existia vegetação perto da igreja, a praça da Matriz foi construída em
+                    1958. Ao redor da igreja existem atualmente alguns casarões feitos no mesmo estilo de
+                    construção da época</p>
                 </div>
                 <div class="col-lg-4">
-                <p>A frente do edifício é composta por um jardim com árvores e arbustos, atravessando a rua
-tem a Santa Casa de Caridade de Formiga, na parte de trás e ao lado do edifício,onde
-também era parte do colégio, atualmente há no local um condomínio. Próximo ao edifício há
-o Medcenter, outros edifícios, e alguns estabelecimentos comerciais.</p>
+                <p>Tanto o exterior e o interior do edifício aparentam ser bem conservados, porém, o
+                segundo andar não está no mesmo estado. Existem muitos cupins em muitas das mobílias
+                de madeira, e o piso está um pouco rachado, de forma que um peso muito grande poderia
+                quebra-lo.</p>
                </div>
             </div>
         </div>
