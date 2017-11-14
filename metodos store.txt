@@ -1,0 +1,224 @@
+
+    public function storeMatriz(){
+        
+        
+                //Tenta calidar, caso retorne erro
+                 // redireciona para a página anterior.
+                 $this->validate(request(),[
+                    'name' => 'required',
+                    'body'  => 'required'
+                ]);
+               
+                //Cria um novo post
+                $post = new Post;
+                $post->name = request('name');
+                $post->body = request('message');
+                $post->predio_id = request(2);
+                // Salva o post no BD.
+                $post->save();
+                // Redireciona para o index.
+                return redirect('/');
+        
+                  
+                /*
+                // Cria e salva um novo post.
+                Post::create([
+                    'name' => request('name'),
+                    'body'  => request('message')
+                ]);
+        
+                // Redireciona para o index.
+                return redirect('/');*/
+            }
+
+            public function storeVicentinos(){
+                
+                
+                        //Tenta calidar, caso retorne erro
+                         // redireciona para a página anterior.
+                         $this->validate(request(),[
+                            'name' => 'required',
+                            'body'  => 'required'
+                        ]);
+                       
+                        //Cria um novo post
+                        $post = new Post;
+                        $post->name = request('name');
+                        $post->body = request('message');
+                        $post->predio_id = request(3);
+                        // Salva o post no BD.
+                        $post->save();
+                        // Redireciona para o index.
+                        return redirect('/');
+                
+                          
+                        /*
+                        // Cria e salva um novo post.
+                        Post::create([
+                            'name' => request('name'),
+                            'body'  => request('message')
+                        ]);
+                
+                        // Redireciona para o index.
+                        return redirect('/');*/
+                    }
+
+                    public function storeAntonio(){
+                        
+                        
+                                //Tenta calidar, caso retorne erro
+                                 // redireciona para a página anterior.
+                                 $this->validate(request(),[
+                                    'name' => 'required',
+                                    'body'  => 'required'
+                                ]);
+                               
+                                //Cria um novo post
+                                $post = new Post;
+                                $post->name = request('name');
+                                $post->body = request('message');
+                                $post->predio_id = request(4);
+                                // Salva o post no BD.
+                                $post->save();
+                                // Redireciona para o index.
+                                return redirect('/');
+                        
+                                  
+                                /*
+                                // Cria e salva um novo post.
+                                Post::create([
+                                    'name' => request('name'),
+                                    'body'  => request('message')
+                                ]);
+                        
+                                // Redireciona para o index.
+                                return redirect('/');*/
+                            }
+
+                            public function storeEmart(){
+                                
+                                
+                                        //Tenta calidar, caso retorne erro
+                                         // redireciona para a página anterior.
+                                         $this->validate(request(),[
+                                            'name' => 'required',
+                                            'body'  => 'required'
+                                        ]);
+                                       
+                                        //Cria um novo post
+                                        $post = new Post;
+                                        $post->name = request('name');
+                                        $post->body = request('message');
+                                        $post->predio_id = request(5);
+                                        // Salva o post no BD.
+                                        $post->save();
+                                        // Redireciona para o index.
+                                        return redirect('/');
+                                
+                                          
+                                        /*
+                                        // Cria e salva um novo post.
+                                        Post::create([
+                                            'name' => request('name'),
+                                            'body'  => request('message')
+                                        ]);
+                                
+                                        // Redireciona para o index.
+                                        return redirect('/');*/
+                                    }
+
+                                    public function storeCasarao(){
+                                        
+                                        
+                                                //Tenta calidar, caso retorne erro
+                                                 // redireciona para a página anterior.
+                                                 $this->validate(request(),[
+                                                    'name' => 'required',
+                                                    'body'  => 'required'
+                                                ]);
+                                               
+                                                //Cria um novo post
+                                                $post = new Post;
+                                                $post->name = request('name');
+                                                $post->body = request('message');
+                                                $post->predio_id = request(6);
+                                                // Salva o post no BD.
+                                                $post->save();
+                                                // Redireciona para o index.
+                                                return redirect('/');
+                                        
+                                                  
+                                                /*
+                                                // Cria e salva um novo post.
+                                                Post::create([
+                                                    'name' => request('name'),
+                                                    'body'  => request('message')
+                                                ]);
+                                        
+                                                // Redireciona para o index.
+                                                return redirect('/');*/
+                                            }
+
+                                            public function storeEstacao(){
+                                                
+                                                
+                                                        //Tenta calidar, caso retorne erro
+                                                         // redireciona para a página anterior.
+                                                         $this->validate(request(),[
+                                                            'name' => 'required',
+                                                            'body'  => 'required'
+                                                        ]);
+                                                       
+                                                        //Cria um novo post
+                                                        $post = new Post;
+                                                        $post->name = request('name');
+                                                        $post->body = request('message');
+                                                        $post->predio_id = request(7);
+                                                        // Salva o post no BD.
+                                                        $post->save();
+                                                        // Redireciona para o index.
+                                                        return redirect('/');
+                                                
+                                                          
+                                                        /*
+                                                        // Cria e salva um novo post.
+                                                        Post::create([
+                                                            'name' => request('name'),
+                                                            'body'  => request('message')
+                                                        ]);
+                                                
+                                                        // Redireciona para o index.
+                                                        return redirect('/');*/
+                                                    }
+
+                                                    public function storeMatadouro(){
+                                                        
+                                                        
+                                                                //Tenta calidar, caso retorne erro
+                                                                 // redireciona para a página anterior.
+                                                                 $this->validate(request(),[
+                                                                    'name' => 'required',
+                                                                    'body'  => 'required'
+                                                                ]);
+                                                               
+                                                                //Cria um novo post
+                                                                $post = new Post;
+                                                                $post->name = request('name');
+                                                                $post->body = request('message');
+                                                                $post->predio_id = request(8);
+                                                                // Salva o post no BD.
+                                                                $post->save();
+                                                                // Redireciona para o index.
+                                                                return redirect('/');
+                                                        
+                                                                  
+                                                                /*
+                                                                // Cria e salva um novo post.
+                                                                Post::create([
+                                                                    'name' => request('name'),
+                                                                    'body'  => request('message')
+                                                                ]);
+                                                        
+                                                                // Redireciona para o index.
+                                                                return redirect('/');*/
+                                                            }

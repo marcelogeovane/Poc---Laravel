@@ -15,38 +15,26 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/rodarte', function () {
-	return view('rodarte');
-});
+Route::get('/rodarte', 'PostController@rodarte');
 
-Route::get('/antoniovieira', function () {
-    return view('antoniovieira');
-});
+Route::get('/antoniovieira', 'PostController@antonio');
 
-Route::get('/emart', function () {
-    return view('emart');
-});
+Route::get('/emart',  'PostController@emart');
 
-Route::get('/engenheiro', function () {
-    return view('engenheiro');
-});
+Route::get('/engenheiro',  'PostController@engenheiro');
 
-Route::get('/estacao', function () {
-    return view('estacao');
-});
+Route::get('/estacao', 'PostController@estacao');
 
-Route::get('/matadouro', function () {
-    return view('matadouro');
-});
+Route::get('/matadouro',  'PostController@matadouro');
 
-Route::get('/rodarte', function () {
-    return view('rodarte');
-});
+Route::get('/vicentinos',  'PostController@vicentinos');
 
-Route::get('/vicentinos', function () {
-    return view('vicentinos');
-});
+Route::get('/matriz', 'PostController@matriz');
 
-Route::get('/matriz', function () {
-    return view('matriz');
-});
+//Route::get('/posts/{post}', 'PostController@show');
+
+Route::get('/index1', 'PostController@index');
+
+Route::get('/posts/create', 'PostController@create');
+
+Route::post('/posts', 'PostController@store');

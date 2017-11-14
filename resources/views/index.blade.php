@@ -413,7 +413,6 @@
                                       data-validation-required-message="Please enter a message."></textarea>
                             <p class="help-block text-danger"></p>
                         </div>
-                    </div>
                     <br>
                     <div id="success"></div>
                     <div class="row">
