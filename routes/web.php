@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'ContatoController@index');
 
 Route::get('/rodarte', 'PostController@rodarte');
 
@@ -31,10 +29,14 @@ Route::get('/vicentinos',  'PostController@vicentinos');
 
 Route::get('/matriz', 'PostController@matriz');
 
-//Route::get('/posts/{post}', 'PostController@show');
-
-Route::get('/index1', 'PostController@index');
-
 Route::get('/posts/create', 'PostController@create');
 
 Route::post('/posts', 'PostController@store');
+
+Route::post('/contacts', 'ContatoController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin', 'ContatoController@admin');

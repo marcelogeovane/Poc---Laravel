@@ -42,6 +42,9 @@
                         Copyright &copy; Your Website 2016
                     </div>
                 </div>
+                <div class="row">
+                    <a align="right" href="{{url('/login')}}">Entre como administrador</a>
+                </div>
             </div>
         </div>
     </footer>
